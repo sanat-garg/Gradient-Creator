@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+<script type="text/javascript">
+		function onloa(){
+			var r = Math.floor(Math.random() * 255);  
+			var g = Math.floor(Math.random() * 255);  
+			var b = Math.floor(Math.random() * 255);  
+			var rr = Math.floor(Math.random() * 255);   
+			var gg = Math.floor(Math.random() * 255);  
+			var bb = Math.floor(Math.random() * 255);  
+			var body = document.getElementById('body');
+			body.style.height = screen.availHeight- (screen.availHeight/9.5)+'px';
+			body.style.width = screen.availWidth-(screen.availWidth/10)+'px';
+			body.style.top = '0px'
+			var textArray = ['right','left','top','bottom'];
+			var randomIndex = Math.floor(Math.random() * textArray.length); 
+			var randomElement = textArray[randomIndex];
+			document.getElementById('body').style.backgroundImage = ('linear-gradient(to '+ randomElement +', rgb('+r+','+g+','+b+'),rgb('+rr+','+gg+','+bb+'))');
+			document.getElementById('txt').innerHTML = '(to '+randomElement+', rgb('+r+','+g+','+b+'),rgb('+rr+','+gg+','+bb+'))';
+			document.getElementById('btn').style.color = 'rgb('+r+','+g+','+b+')';
+			document.getElementById('btn').onmouseover = function(){
+				document.getElementById('btn').style.color = 'rgb('+r+','+g+','+b+')';
+			}
+			document.getElementById('btn').onmouseout = function(){
+				document.getElementById('btn').style.color = 'white';
+			}
+			
+
+		}
+
+</script>
+
+	<title></title>
+</head>
+<body id="body" style="background: black">
+	<p id="txt" style="font-family: 'Acme', sans-serif;text-transform: uppercase;font-size: 24px;color: white;position: absolute;top: 0px;left: 20px"></p>
+<button id="btn" onclick="onloa()" style="position: absolute;">Click Me!</button>
+<p onclick="window.location = 'index.html'" style="width: 5%;text-align: center;font-family: Tahoma;color: white;text-decoration: none;border:none;cursor: pointer;margin-left: 95%;height: 20px;position: absolute;right: 10px;top: 5px" id="grad">Solid</p>
+</body>
+</html>
+<style type="text/css">
+	#btn:hover{
+		background: white;
+		color: black;
+		border-color: black
+	}
+	#btn{background: transparent;border:1px solid white;color: white;font-family: #POUND, sans-serif;padding: 3px 10px;text-align: center;width: 6%;margin-left: 47%;margin-top: 25%;outline: none;font-weight: 600}
+	#grad:hover{
+		background: grey;border-radius: 12px;color:black;
+	}
+	
+</style>
