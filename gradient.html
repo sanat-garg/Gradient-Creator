@@ -22,9 +22,7 @@
 			document.getElementById('body').style.backgroundImage = ('linear-gradient(to '+ randomElement +', rgb('+r+','+g+','+b+'),rgb('+rr+','+gg+','+bb+'))');
 			document.getElementById('txt').innerHTML = '(to '+randomElement+', rgb('+r+','+g+','+b+'),rgb('+rr+','+gg+','+bb+'))';
 			document.getElementById('btn').style.color = 'rgb('+r+','+g+','+b+')';
-			document.getElementById('btn').onmouseover = function(){
-				document.getElementById('btn').style.color = 'rgb('+r+','+g+','+b+')';
-			}
+			document.getElementById('btn').onmouseover = function(){document.getElementById('btn').style.color = 'rgb('+r+','+g+','+b+')';}
 			document.getElementById('btn').onmouseout = function(){document.getElementById('btn').style.color = 'white';}
 			
 
